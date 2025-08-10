@@ -263,7 +263,7 @@ checkoutForm.addEventListener('submit', (e) => {
     const encodedMessage = encodeURIComponent(whatsappMessage);
     
     // Nomor WhatsApp tujuan
-    const phoneNumber = '0895386863049';
+    const phoneNumber = '62895386863049';
     
     // Membuat link WhatsApp
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -282,4 +282,5 @@ checkoutForm.addEventListener('submit', (e) => {
 
 // Inisialisasi
 renderProducts();
+
 updateCart();
