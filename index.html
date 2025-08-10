@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamStore - Jual Akun Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="#" class="logo"><span class="logo-sylfa">Sylfa</span><span class="logo-accent">Store</span></a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Produk</a></li>
+                <li><a href="#">Testimoni</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+        <button class="cart-button" id="cart-btn">
+            <i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>Dapatkan Akun Streaming Premium dengan Harga Terbaik</h1>
+                <p>Nikmati ribuan film dan serial tanpa iklan.</p>
+                <a href="#product-list" class="cta-button">Lihat Produk</a>
+            </div>
+        </section>
+
+        <section class="product-section" id="product-section">
+            <h2>Produk Kami</h2>
+            <div class="product-list" id="product-list">
+                </div>
+        </section>
+    </main>
+    
+    <div id="cart-sidebar" class="cart-sidebar">
+        <h2>Keranjang Belanja</h2>
+        <div id="cart-items">
+            <p id="empty-cart-message">Keranjang Anda kosong.</p>
+        </div>
+        <div class="cart-footer">
+            <p>Total: <span id="cart-total">Rp 0</span></p>
+            <button id="checkout-btn" class="cta-button" disabled>Checkout</button>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Detail Pembelian</h2>
+            <form id="checkout-form">
+                <label for="customer-name">Nama Lengkap:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+
+                <label for="customer-email">Email:</label>
+                <input type="email" id="customer-email" name="customer-email" required>
+                
+                <label for="customer-phone">Nomor WhatsApp:</label>
+                <input type="text" id="customer-phone" name="customer-phone" required>
+
+                <h3>Ringkasan Pesanan</h3>
+                <div id="summary-items"></div>
+                <p class="total-summary">Total Akhir: <span id="final-total">Rp 0</span></p>
+
+                <button type="submit" class="cta-button">Lanjutkan ke Pembayaran</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
